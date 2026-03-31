@@ -30,3 +30,4 @@
 /ime minecraft:diamond get
 /ime minecraft:diamond set 10
 /imereset
+/ime minecraft:diamond set 3

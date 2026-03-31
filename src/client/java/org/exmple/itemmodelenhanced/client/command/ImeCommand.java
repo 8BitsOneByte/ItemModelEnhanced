@@ -3,7 +3,6 @@ package org.exmple.itemmodelenhanced.client.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.FloatArgumentType;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.Item;
@@ -110,14 +109,7 @@ public class ImeCommand {
     }
 
     private static Item parseItemById(String itemIdStr) {
-        String normalizedId = itemIdStr.contains(":") ? itemIdStr : "minecraft:" + itemIdStr;
-        for (Item item : BuiltInRegistries.ITEM) {
-            var key = BuiltInRegistries.ITEM.getKey(item);
-            if (key.toString().equals(normalizedId)) {
-                return item;
-            }
-        }
-        return null;
+        return ItemScaleRegistry.findItemById(itemIdStr);
     }
 }
 
