@@ -11,13 +11,13 @@
   "environment": "client",
   "entrypoints": {
     "fabric-datagen": [
-      "org.exmple.itemmodelenhanced.client.ItemmodelenhancedDataGenerator"
+      "org.example.itemmodelenhanced.client.ItemmodelenhancedDataGenerator"
     ],
     "client": [
-      "org.exmple.itemmodelenhanced.client.ItemmodelenhancedClient"
+      "org.example.itemmodelenhanced.client.ItemmodelenhancedClient"
     ],
     "main": [
-      "org.exmple.itemmodelenhanced.Itemmodelenhanced"
+      "org.example.itemmodelenhanced.Itemmodelenhanced"
     ]
   },
   "mixins": [

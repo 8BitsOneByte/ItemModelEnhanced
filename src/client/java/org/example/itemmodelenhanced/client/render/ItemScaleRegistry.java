@@ -1,48 +1,48 @@
-package org.exmple.itemmodelenhanced.client.render;
+package org.example.itemmodelenhanced.client.render;
 
 import net.minecraft.world.item.Item;
-import java.util.HashMap;
+
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * 全局物品缩放注册表，管理物品的模型缩放倍率
+ * Global item scale registry that manages model scale multipliers for items.
  */
 public class ItemScaleRegistry {
-    private static final Map<Item, Float> SCALE_MAP = new HashMap<>();
+    private static final Map<Item, Float> SCALE_MAP = new ConcurrentHashMap<>();
 
     /**
-     * 设置物品缩放倍率
+     * Sets the scale multiplier for the given item.
      */
     public static void setScale(Item item, float scale) {
         SCALE_MAP.put(item, scale);
     }
 
     /**
-     * 获取物品缩放倍率，如果未设置则返回 1.0
+     * Returns the scale multiplier for the given item, defaulting to 1.0 if not set.
      */
     public static float getScale(Item item) {
         return SCALE_MAP.getOrDefault(item, 1.0f);
     }
 
     /**
-     * 清除单个物品的缩放设置
+     * Clears the scale setting for the given item.
      */
     public static void clearScale(Item item) {
         SCALE_MAP.remove(item);
     }
 
     /**
-     * 清除所有缩放设置
+     * Clears all item scale settings.
      */
     public static void clearAll() {
         SCALE_MAP.clear();
     }
 
     /**
-     * 检查物品是否有自定义缩放
+     * Returns true if the given item has a custom scale set.
      */
     public static boolean hasCustomScale(Item item) {
         return SCALE_MAP.containsKey(item);
     }
 }
-

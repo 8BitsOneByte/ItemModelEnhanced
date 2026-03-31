@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.exmple.itemmodelenhanced.mixin.client",
+  "package": "org.example.itemmodelenhanced.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "client": [
     "ItemEntityRenderStateMixin",

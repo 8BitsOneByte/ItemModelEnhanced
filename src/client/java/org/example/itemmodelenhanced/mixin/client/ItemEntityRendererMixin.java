@@ -1,4 +1,4 @@
-package org.exmple.itemmodelenhanced.mixin.client;
+package org.example.itemmodelenhanced.mixin.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.SubmitNodeCollector;
@@ -6,8 +6,8 @@ import net.minecraft.client.renderer.entity.ItemEntityRenderer;
 import net.minecraft.client.renderer.entity.state.ItemEntityRenderState;
 import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.world.entity.item.ItemEntity;
-import org.exmple.itemmodelenhanced.client.render.DiamondDropScaleState;
-import org.exmple.itemmodelenhanced.client.render.ItemScaleRegistry;
+import org.example.itemmodelenhanced.client.render.ItemScaleState;
+import org.example.itemmodelenhanced.client.render.ItemScaleRegistry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,7 +21,7 @@ public class ItemEntityRendererMixin {
     )
     private void itemmodelenhanced$markItemScale(ItemEntity itemEntity, ItemEntityRenderState itemEntityRenderState, float tickDelta, CallbackInfo ci) {
         float scale = ItemScaleRegistry.getScale(itemEntity.getItem().getItem());
-        ((DiamondDropScaleState)itemEntityRenderState).itemmodelenhanced$setScale(scale);
+        ((ItemScaleState) itemEntityRenderState).itemmodelenhanced$setScale(scale);
     }
 
 
@@ -39,11 +39,9 @@ public class ItemEntityRendererMixin {
             CameraRenderState cameraRenderState,
             CallbackInfo ci
     ) {
-        float scale = ((DiamondDropScaleState)itemEntityRenderState).itemmodelenhanced$getScale();
+        float scale = ((ItemScaleState) itemEntityRenderState).itemmodelenhanced$getScale();
         if (scale != 1.0f) {
             poseStack.scale(scale, scale, scale);
         }
     }
 }
-
-

@@ -1,4 +1,4 @@
-package org.exmple.itemmodelenhanced.client.command;
+package org.example.itemmodelenhanced.client.command;
 
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
@@ -22,13 +22,13 @@ public class ItemIdArgumentType implements ArgumentType<String> {
         while (reader.canRead() && reader.peek() != ' ') {
             reader.skip();
         }
-        
+
         String result = reader.getString().substring(start, reader.getCursor());
-        
+
         if (result.isEmpty()) {
             throw CommandSyntaxException.BUILT_IN_EXCEPTIONS.literalIncorrect().createWithContext(reader, "item_id");
         }
-        
+
         return result;
     }
 
@@ -40,5 +40,3 @@ public class ItemIdArgumentType implements ArgumentType<String> {
         return builder.buildFuture();
     }
 }
-
-

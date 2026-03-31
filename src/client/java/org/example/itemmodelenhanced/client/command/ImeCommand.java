@@ -1,4 +1,4 @@
-package org.exmple.itemmodelenhanced.client.command;
+package org.example.itemmodelenhanced.client.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.FloatArgumentType;
@@ -6,9 +6,10 @@ import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import org.exmple.itemmodelenhanced.client.render.ItemScaleRegistry;
+import org.example.itemmodelenhanced.client.render.ItemScaleRegistry;
 
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
 
@@ -111,13 +112,10 @@ public class ImeCommand {
 
     private static Item parseItemById(String itemIdStr) {
         String normalizedId = itemIdStr.contains(":") ? itemIdStr : "minecraft:" + itemIdStr;
-        for (Item item : BuiltInRegistries.ITEM) {
-            var key = BuiltInRegistries.ITEM.getKey(item);
-            if (key.toString().equals(normalizedId)) {
-                return item;
-            }
+        ResourceLocation location = ResourceLocation.tryParse(normalizedId);
+        if (location == null) {
+            return null;
         }
-        return null;
+        return BuiltInRegistries.ITEM.getValue(location);
     }
 }
-
