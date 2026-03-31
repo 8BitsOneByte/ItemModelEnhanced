@@ -1,12 +1,12 @@
-package org.exmple.itemmodelenhanced.mixin.client;
+package org.example.itemmodelenhanced.mixin.client;
 
-import org.exmple.itemmodelenhanced.client.render.DiamondDropScaleState;
+import org.example.itemmodelenhanced.client.render.ItemScaleState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import net.minecraft.client.renderer.entity.state.ItemEntityRenderState;
 
 @Mixin(ItemEntityRenderState.class)
-public class ItemEntityRenderStateMixin implements DiamondDropScaleState {
+public class ItemEntityRenderStateMixin implements ItemScaleState {
     @Unique
     private float itemmodelenhanced$scale = 1.0f;
 
@@ -20,5 +20,3 @@ public class ItemEntityRenderStateMixin implements DiamondDropScaleState {
         this.itemmodelenhanced$scale = scale;
     }
 }
-
-

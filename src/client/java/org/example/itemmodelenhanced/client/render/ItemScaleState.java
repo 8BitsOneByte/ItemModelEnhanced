@@ -1,8 +1,7 @@
-package org.exmple.itemmodelenhanced.client.render;
+package org.example.itemmodelenhanced.client.render;
 
-public interface DiamondDropScaleState {
+public interface ItemScaleState {
     float itemmodelenhanced$getScale();
 
     void itemmodelenhanced$setScale(float scale);
 }
-

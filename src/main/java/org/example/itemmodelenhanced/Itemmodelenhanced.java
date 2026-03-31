@@ -1,4 +1,4 @@
-package org.exmple.itemmodelenhanced;
+package org.example.itemmodelenhanced;
 
 import net.fabricmc.api.ModInitializer;
 
