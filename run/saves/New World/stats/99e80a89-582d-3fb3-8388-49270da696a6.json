@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:diamond": 66,
+      "minecraft:birch_stairs": 2
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 5914,
+      "minecraft:time_since_rest": 3642,
+      "minecraft:walk_one_cm": 6715,
+      "minecraft:total_world_time": 3666,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 17852,
+      "minecraft:crouch_one_cm": 180,
+      "minecraft:sneak_time": 104,
+      "minecraft:play_time": 3642,
+      "minecraft:jump": 28,
+      "minecraft:time_since_death": 3642,
+      "minecraft:drop": 32
+    },
+    "minecraft:dropped": {
+      "minecraft:gold_ingot": 9,
+      "minecraft:diamond": 84,
+      "minecraft:birch_stairs": 2
+    }
+  },
+  "DataVersion": 4671
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "itemmodelenhanced",
+  "version": "${version}",
+  "name": "ItemModelEnhanced",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/itemmodelenhanced/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.exmple.itemmodelenhanced.client.ItemmodelenhancedDataGenerator"
+    ],
+    "client": [
+      "org.exmple.itemmodelenhanced.client.ItemmodelenhancedClient"
+    ],
+    "main": [
+      "org.exmple.itemmodelenhanced.Itemmodelenhanced"
+    ]
+  },
+  "mixins": [
+    "itemmodelenhanced.mixins.json",
+    {
+      "config": "itemmodelenhanced.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

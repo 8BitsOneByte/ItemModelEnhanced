@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2265,
+      "minecraft:walk_one_cm": 1889,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 1,
+      "minecraft:play_time": 2265,
+      "minecraft:damage_dealt": 184,
+      "minecraft:jump": 28,
+      "minecraft:time_since_death": 2265,
+      "minecraft:drop": 1,
+      "minecraft:sprint_one_cm": 8222,
+      "minecraft:total_world_time": 2278,
+      "minecraft:fly_one_cm": 31326,
+      "minecraft:walk_on_water_one_cm": 181
+    },
+    "minecraft:dropped": {
+      "minecraft:diamond": 1
+    },
+    "minecraft:killed": {
+      "minecraft:cow": 1
+    }
+  },
+  "DataVersion": 4671
+}

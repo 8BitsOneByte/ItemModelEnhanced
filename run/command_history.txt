@@ -1,0 +1,32 @@
+/ime minecraft:diamond 3
+/ime minecraft:acacia_boat 2
+/ime minecraft:acacia_door 3
+/ime minecraft:acacia_boat 2
+/ime diamond 3
+/ime minecraft:diamond 3
+/ime minecraft:acacia_boat 2
+/ime minecraft:acacia_boat 3
+/ime minecraft:acacia_boat 4
+/ime minecraft:acacia_boat 5
+/ime minecraft:gold_ingot 3
+/ime minecraft:gold_ingot 12
+/ime minecraft:gold_ingot 10
+/ime minecraft:gold_ingot 0.2
+/ime minecraft:gold_ingot 0.01
+/ime clear
+/ime minecraft:diamond 100
+/ime minecraft:diamond 10
+/ime clear
+/ime minecraft:diamond get
+/ime minecraft:diamond set 2
+/ime minecraft:diamond set 3
+/ime minecraft:diamond set 4
+/ime minecraft:diamond set 10
+/ime minecraft:diamond get
+/ime minecraft:diamond reset
+/ime minecraft:diamond set 3
+/ime minecraft:diamond reset
+/imereset
+/ime minecraft:diamond get
+/ime minecraft:diamond set 10
+/imereset
